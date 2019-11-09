@@ -6,7 +6,7 @@ var app = express();
 var port = process.env.PORT || 8080
 
 //define home route
-app.use(express.static(__dirname)); 
+app.use(express.static(__dirname + '/static/html')); 
 app.set('views',(__dirname));
 app.set('view engine','ejs');
 app.get('/', (req, res) => res.render('index'));
