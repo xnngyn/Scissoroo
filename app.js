@@ -1,21 +1,22 @@
 var express = require('express');
+var path = require('path')
 var app = express();
 
 // set port
 var port = process.env.PORT || 8080
 
+//define home route
 app.use(express.static(__dirname)); 
+app.set('views',(__dirname));
+app.set('view engine','ejs');
+app.get('/', (req, res) => res.render('index'));
 
-// define home route
-app.get("/", function(req, res){
-    res.render("index");
-})
-
-// Use middlewares to set view engine and post json data to the server
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+/// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+  });
 
 // start the server
 app.listen(port, function(){
