@@ -1,0 +1,20 @@
+{
+    "name": "scissoroo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "4.17.1",
+        "body-parser": "1.19.0",
+        "mongoose": "5.7.9"
+    },
+    "author": "Xuan-Anh Nguyen",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xnngyn/Scissoroo.git"
+    }
+}
