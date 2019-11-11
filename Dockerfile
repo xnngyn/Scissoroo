@@ -14,9 +14,9 @@ RUN npm install
 # RUN npm install --only=production
 
 # Bundle app source
-COPY . /app
+COPY . .
+
+EXPOSE 8080
 
 # RUN COMMAND
-CMD [ node app.js]
-
-EXPOSE 8000
+CMD [ "node", "app.js" ]
