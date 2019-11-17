@@ -7,3 +7,16 @@ html, body {
 	background-size: contain;
 	background-position: center;
 }
+
+#h001 {
+	color: white;
+	background-color: hsla(0,0%,50%,0.5);
+	text-align: center;
+}
+
+#eingabe {
+	color: white;
+	background-color: hsla(0,0%,50%,0.5);
+	text-align: center;
+	/* position: center center; */
+}
