@@ -3,7 +3,7 @@ var path = require('path')
 var app = express();
 
 // set port
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 //define home route
 app.use(express.static(__dirname + '/static/html')); 
