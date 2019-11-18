@@ -19,15 +19,15 @@ app.use(function(req, res, next) {
   });
 
 // Database
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb://localhost:27017//scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  console.log("database connection on")
-client.close();
-});
+//const MongoClient = require('mongodb').MongoClient;
+//const uri = "mongodb://localhost:27017//scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority";
+//const client = new MongoClient(uri, { useNewUrlParser: true });
+//lient.connect(err => {
+//  const collection = client.db("test").collection("devices");
+//  // perform actions on the collection object
+//  console.log("database connection on")
+//client.close();
+//});
 
 
 // start the server
