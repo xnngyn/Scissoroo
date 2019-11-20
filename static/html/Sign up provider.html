@@ -15,16 +15,37 @@
 			<button class="button2" type="button">Sign in</button> 
 		</a><br/>
 	</div>
-	<div>
-		<h3>Create an Provider-Account</h3>
-		<input value="Salon Name"/>
-		<input value="Address"/>
-		<input value="E-Mail"/>
-		<input value="Password"/>
-		<button type="button">Sign Up</button>
-		<a href="Sign in">Already have an account?</a>
-		<a href="Sign up as user">Sign up as provider</a>
-		<h6>By pressing Sign Up you agree with the Terms of Services and Privacy Policy</h6>
+	<div id="insertprovider">
+		<section class="insertprovider">
+			<h3>Create an Provider-Account</h3>
+			<form action="/insertprovider" method="post">
+			<input id="name" name="name" type="text" placeholder="Salon Name"/>
+			<input id="strasse" name="strasse" type="text" placeholder="Strasse" />
+			<input id="hausnr" type="text" name="hausnr" placeholder="Hausnummer">
+			<input id="plz" type="text" name="plz" placeholder="PLZ"/>
+			<input id="stadt" type="text" name="stadt" placeholder="Stadt"/>
+			<input id="email" type="email" name="email" placeholder="Email"/>
+			<input id="angestellte" type="text" name="angestellte" placeholder="Anzahl der Friseure">
+			<input id="bild" type="image" name="bild" placeholder="Bild">
+			<input list="parkplatz" name="parkplatz" id="parkplatz" type="text"/>
+  				<datalist id="parkplatzt">
+    				<option value="Ja">
+    				<option value="Nein">
+  				</datalist>
+  			<input id="mfriseur" type="checkbox" name="mfriseur" />Männerschnitt
+  			<input id="ffriseur" type="checkbox" name="ffriseur" />Frauenschnitt
+  			<input id="hwaschen" type="checkbox" name="hwaschen" />Waschen
+  			<input id="foenen" type="checkbox" name="foenen" />Fönen
+  			<input id="beratung" type="checkbox" name="beratung" />Beratug
+  			<input id="faerben" type="checkbox" name="faerben" />Färben
+  			<input id="toenen" type="checkbox" name="toenen" />Tönung
+			<input id="password" type="password" name="password" placeholder="Password" />
+			<button type="button">Sign Up</button>
+			<a href="Sign in">Already have an account?</a>
+			<a href="Sign up as user">Sign up as provider</a>
+			<h6>By pressing Sign Up you agree with the Terms of Services and Privacy Policy</h6>
+			</form>
+		</section>
 	</div>
 </body>
 </html>
