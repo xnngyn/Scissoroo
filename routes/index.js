@@ -3,7 +3,7 @@ var router = express.Router();
 var mongodb = require('mongodb').MongoClient;
 var assert = require('assert');
 
-var url = 'mongodb://localhost:27017/scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority';
+var url = 'mongodb://localhost:27017/scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test';
 
 // Get Hompage
 router.get('/', function(req, res, next){
