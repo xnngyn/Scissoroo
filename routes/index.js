@@ -20,8 +20,28 @@ router.get('/get-data', function(req, res, next){
 // insert
 router.post('/insertuser', function(req, res, next){
 var user = {
-    
+    fullname: req.body.fname,
+    lastname: req.body.lname,
+    birthdate: req.body.gdatum,
+    sex: req.body.geschlecht,
+    strasse: req.body.strasse,
+    hausnr: req.body.hausnr,
+    plz: req.body.plz,
+    stadt: req.body.stadt,
+    email: req.body.email,
+    pass: req.body.pass
 };
+
+mongodb.connect(url, function(err, db) {
+    assert.equal(null, err);
+    db.collection('user').insertOne(user, function(err, result) {
+      assert.equal(null, err);
+      console.log('Item inserted');
+      db.close();
+    });
+  });
+
+  res.redirect('/');
 });
 
 router.post('/insertprovider', function(req, res, next){
