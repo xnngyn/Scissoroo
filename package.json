@@ -13,7 +13,7 @@
         "express": "4.17.1",
         "body-parser": "1.19.0",
         "ejs": "2.7.1",
-        "mongodb": "3.3.4"
+        "mongodb": "3.3.4"        
     },
     "author": "Xuan-Anh Nguyen",
     "license": "ISC",
