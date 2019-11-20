@@ -34,7 +34,7 @@ var user = {
 
 mongodb.connect(url, function(err, db) {
     assert.equal(null, err);
-    db.collection('user').insertOne(user, function(err, result) {
+    db.collection('scissoroo.user').insertOne(user, function(err, result) {
       assert.equal(null, err);
       console.log('Item inserted');
       db.close();
