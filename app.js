@@ -15,7 +15,7 @@ app.get('./', (req, res) => res.render('index'));
 app.get('/thelist', function(req, res){
   var MongoClient = mongodb.MongoClient;
 
-  var url = 'mongodb://localhost:27017/scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority'
+  var url = 'mongodb://localhost:27017//scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority'
 
   MongoClient.connect(url,function(err, db){
     if(err){
