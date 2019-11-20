@@ -14,15 +14,39 @@ router.get('/get-data', function(req, res, next){
 
 });
 
-router.post('/insert', function(req, res, next){
-
+router.post('/insertuser', function(req, res, next){
+var user = {
+    
+};
 });
 
-router.post('/update', function(req, res, next){
-
+router.post('/insertprovider', function(req, res, next){
+var prov = {
+    
+};
 });
 
-router.post('/delete', function(req, res, next){
+router.post('/updateuser', function(req, res, next){
+var user = {
 
+};
+});
+
+router.post('/updateprovider', function(req, res, next){
+var prov = {
+
+};
+});
+
+router.post('/deleteuser', function(req, res, next){
+var user = {
+
+};
+});
+
+router.post('/deleteprovider', function(req, res, next){
+var prov = {
+    
+};
 });
 module.exports = router;
