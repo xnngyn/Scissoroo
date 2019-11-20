@@ -32,7 +32,7 @@ var user = {
     pass: req.body.pass
 };
 
-mongodb.connect(url, {useNewUrlParser = true}, function(err, db) {
+mongodb.connect(url, { useNewUrlParser : true}, function(err, db) {
     assert.equal(null, err);
     db.collection('scissoroo.user').insertOne(user, function(err, result) {
       assert.equal(null, err);
