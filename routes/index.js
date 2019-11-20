@@ -32,12 +32,13 @@ var user = {
     pass: req.body.pass
 };
 
-mongodb.connect(url, { useNewUrlParser : true}, function(err, db) {
+mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
     assert.equal(null, err);
+    var db = client.db('scissoroo');
     db.collection('user').insertOne(user, function(err, result) {
       assert.equal(null, err);
       console.log('Item inserted');
-      db.close();
+      client.close();
     });
   });
 
