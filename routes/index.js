@@ -10,10 +10,14 @@ router.get('/', function(req, res, next){
     res.render('index');
 });
 
+// get all data
 router.get('/get-data', function(req, res, next){
 
 });
 
+
+
+// insert
 router.post('/insertuser', function(req, res, next){
 var user = {
     
@@ -26,6 +30,9 @@ var prov = {
 };
 });
 
+
+
+// update
 router.post('/updateuser', function(req, res, next){
 var user = {
 
@@ -38,6 +45,9 @@ var prov = {
 };
 });
 
+
+
+// delete
 router.post('/deleteuser', function(req, res, next){
 var user = {
 
@@ -46,7 +56,9 @@ var user = {
 
 router.post('/deleteprovider', function(req, res, next){
 var prov = {
-    
+
 };
 });
+
+
 module.exports = router;
