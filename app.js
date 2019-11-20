@@ -22,23 +22,8 @@ app.get('/thelist', function(req, res){
       console.log('Unable to connect to the server',err)
     } else {
       console.log('Connection Established')
-
-      var collection = db.collection('scissoroo');
-
-      collection.find({}).toArray(function(err, result){
-        if(err){
-          res.send(err);
-        } else if(result.length){
-          res.render('friseure', {
-            'friseure':result
-          });
-        } else {
-          res.send('No documents found');
-        }
-        db.close()
-      });
-    }
-  });
+      };
+});
 });
 
 // catch 404 and forward to error handler
