@@ -7,12 +7,12 @@ var routes = require('./routes/index');
 // set port
 const port = process.env.PORT || 8080;
 
-//view engine
-app.set('views',path.join(__dirname, 'views'));
+//view engine 
+app.set('views', path.join(__dirname + '/views'));
 app.set('view engine','ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', routes);
 
