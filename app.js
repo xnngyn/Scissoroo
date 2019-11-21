@@ -8,7 +8,7 @@ var routes = require('./routes/index');
 const port = process.env.PORT || 8080;
 
 //view engine setup
-app.use(express.static(__dirname + '/views')); 
+app.use(express.static(__dirname + '/public')); 
 app.set('views',(__dirname));
 app.set('view engine','ejs');
 app.use(bodyParser.json());
