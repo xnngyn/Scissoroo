@@ -39,7 +39,7 @@ router.get('/get-data', function(req, res, next){
 
 
 
-// insert 
+// insert user
 router.post('/insertuser', async(req, res) =>{
 try{
     const salt = await bcrypt.genSalt();
@@ -73,6 +73,8 @@ mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
   res.redirect('/');
 });
 
+
+// insert provider
 router.post('/insertprovider', function(req, res, next){
 var prov = {
     
