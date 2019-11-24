@@ -5,9 +5,9 @@ var assert = require('assert');
 
 var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority';
 
-// Get Hompage
+// Get Homepage
 router.get('/', function(req, res, next){
-    res.render('../views/index');
+    res.render('index');
 });
 
 // get all data
