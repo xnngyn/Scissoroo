@@ -45,6 +45,7 @@ try{
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(req.body.pass, salt);
     var user = {
+        username: req.body.username,
         fullname: req.body.fname,
         lastname: req.body.lname,
         birthdate: req.body.gdatum,
