@@ -7,7 +7,7 @@ var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongo
 
 // Get Hompage
 router.get('/', function(req, res, next){
-    res.render('index');
+    res.render('../views/index');
 });
 
 // get all data
