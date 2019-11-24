@@ -10,6 +10,26 @@ router.get('/', function(req, res, next){
     res.render('index');
 });
 
+router.get('/SignUp', function(req, res, next){
+    res.render('SignUp');
+});
+
+router.get('/SignIn', function(req, res, next){
+    res.render('SignIn');
+});
+
+router.get('/SignUpProvider', function(req, res, next){
+    res.render('SignUpProvider');
+});
+
+router.get('/Results', function(req, res, next){
+    res.render('Results');
+});
+
+router.get('/Detailansicht', function(req, res, next){
+    res.render('Detailansicht');
+});
+
 // get all data
 router.get('/get-data', function(req, res, next){
 
