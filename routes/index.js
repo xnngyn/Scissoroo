@@ -60,8 +60,6 @@ try{
     res.status.send();
 }
 
-});
-
 mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
     assert.equal(null, err);
     var db = client.db('scissoroo');
