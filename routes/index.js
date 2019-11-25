@@ -82,7 +82,10 @@ var prov = {
 };
 });
 
+// user login
+router.post('/login', async(req, res)=>{
 
+});
 
 // update
 router.post('/updateuser', function(req, res, next){
