@@ -1,5 +1,5 @@
 
-body {
+html, body {
 	height: 100%;
 	background-color: gray;
 	background-image: url("../images/Home_Hintergrund.jpg");
