@@ -101,6 +101,7 @@ router.post('/login', async(req, res)=>{
         }
         client.close();
         });
+});
     
 
 // update
