@@ -47,7 +47,7 @@ router.get('/get-data', function(req, res, next){
             resultArray.push(doc);
         }, function(){
             db.close();
-            //Ausgabe
+            res.render("/Results", {items:resultArray});
         });
     });
 });
