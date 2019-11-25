@@ -28,20 +28,20 @@
 			<section class="insertuser">
 				<h3>Create an User-Account</h3>
 				<form action="/insertuser" method="post">
-					<input id="fname" name="fname" type="text" placeholder="First Name" required/>
-					<input id="lname" name="lname" type="text" placeholder="Last Name" required/><br/>
+					<input id="fname" name="fname" type="text" placeholder="First Name" required />
+					<input id="lname" name="lname" type="text" placeholder="Last Name" required /><br/>
 					<input id="gdatum" type="date" name="gdatum" required/><br/>
 					<input list="geschlecht"><br/>
 					<datalist id="geschlecht">
 						<option value="Female">
 						<option value="Male">
 					</datalist>
-					<input id="strasse" type="text" name="strasse" placeholder="Straße" required/>
-					<input id="hausnr" type="text" name="hausnr" placeholder="Hausnummer" required/><br/>
-					<input id="plz" type="text" name="plz" placeholder="PLZ" required/>
-					<input id="stadt" type="text" name="stadt" placeholder="Stadt" required/><br/>
-					<input id="email" name="email" type="email" placeholder="Email" required/><br/>
-					<input id="pass" name="pass" type="password" placeholder="Password" required/><br/>
+					<input id="strasse" type="text" name="strasse" placeholder="Straße" required />
+					<input id="hausnr" type="text" name="hausnr" placeholder="Hausnummer" required /><br/>
+					<input id="plz" type="text" name="plz" placeholder="PLZ" required />
+					<input id="stadt" type="text" name="stadt" placeholder="Stadt" required /><br/>
+					<input id="email" name="email" type="email" placeholder="Email" required /><br/>
+					<input id="pass" name="pass" type="password" placeholder="Password" required /><br/>
 					<button id="butsignup" onclick="window.location.href='/registrationsuccessfull'" type="submit" class="btn btn-primary btn-block">Sign Up</button>
 					<a href="signin">Already have an account?</a><br/>
 					<a href="signupprovider">Sign up as provider</a><br/>
