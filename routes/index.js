@@ -95,11 +95,7 @@ router.post('/login', async(req, res)=>{
             return res.status(400).send('Cannot find user')
         }
         try{
-            if(await bcrypt.compare(req.body.passlogin, user.pass)){
-                res.send('Success')
-            }else {
-                res.send('Not Allowed')
-            }
+            bcrypt.compare(req.body.passlogin, user.pass)
         } catch {
             res.status(500).send()
         }
