@@ -30,7 +30,10 @@ router.get('/results', function(req, res, next){
 router.get('/detailansicht', function(req, res, next){
     res.render('Detailansicht');
 });
-
+// Get Erfolgreiche Registrierung
+router.get('/registrationsuccessfull', function(req, res, next){
+    res.render('erfolgreg');
+});
 
 // get all data
 router.get('/get-data', function(req, res, next){
