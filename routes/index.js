@@ -23,7 +23,7 @@ router.get('/signupprovider', function(req, res, next){
     res.render('SignUpProvider');
 });
 // Get Results
-router.get('/results', function(req, res, next){
+router.get('/result', function(req, res, next){
     res.render('Results');
 });
 // Get Detailansicht
