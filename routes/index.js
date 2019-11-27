@@ -52,8 +52,6 @@ router.get('/get-data', function(req, res, next){
     });
 });
 
-
-
 // insert user
 router.post('/insertuser', async(req, res) =>{
 try{
