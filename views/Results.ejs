@@ -41,15 +41,28 @@
   		</label>
 	</div>
 	<section class="get">
+		<div>
 		<h2>Friseure</h2>
 		<a href="/get-data">alle Friseure laden</a>
-		<div>
-			{{# each items}}
-				<article class="item">
-					<div>Name: {{this.fullname}}</div>>
-				</article>
-			{{/each}}
-		</div>
+		<hr>
+		<% if(items!=null) { %>
+			<table>
+			<tr>
+				<th>Route</th>
+				<th>origin </th>
+				<th>Destination</th>
+				<th>EstimatedTimeOfArrival </th>
+				<th>Date </th>
+				<th>Time</th>
+			</tr>
+			<% items.forEach(function(item){ %>
+			<tr>
+				<td><%= item.Name%></td>
+							
+			</tr>
+			<% }) %>
+			</table>
+			<% } %>
 	</section>
 </body>
 
