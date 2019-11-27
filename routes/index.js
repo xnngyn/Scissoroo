@@ -37,28 +37,20 @@ router.get('/registrationsuccessfull', function(req, res, next){
 
 // get all data
 router.get('/get-data', function(req, res, next){
-    Template.show_data.items = function() {
-        var resultArray = [];
-        mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
+
+    var resultArray = [];
+    mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
+        assert.equal(null, err);
+        var db = client.db('scissoroo');
+        var cursor = db.collection('friseure').find();
+        cursor.forEach(function(doc,err){
             assert.equal(null, err);
-            var db = client.db('scissoroo');
-            var cursor = db.collection('friseure').find();
+            resultArray.push(doc);
+        }, function(){
+            db.close();
+            res.render("/Results", {items: resultArray});
         });
-    return cursor; 
-    };
-//    var resultArray = [];
-//    mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
-//        assert.equal(null, err);
-//        var db = client.db('scissoroo');
-//        var cursor = db.collection('friseure').find();
-//        cursor.forEach(function(doc,err){
-//            assert.equal(null, err);
-//            resultArray.push(doc);
-//        }, function(){
-//            db.close();
-//            res.render("/Results", {items: resultArray});
-//        });
-//    });
+    });
 });
 
 // insert user
