@@ -5,6 +5,50 @@ mongoose.connect('mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2
 var db = mongoose.connection;
 
 // User Schema
-var UserSchema = mongoose.Schema({
-    
-})
+var UserSchema = new mongoose.Schema({
+    fullname:{
+        type    : String,
+        required: true
+    },    
+    lastname:{
+        type    : String,
+        required: true
+    },
+    birthdate:{
+        type    : Date,
+        required: true
+    },
+    sex:{
+        type    : String,
+        required: true
+    },
+    strasse:{
+        type    : String,
+        required: true
+    },
+    hausnr:{
+        type    : Number,
+        required: true
+    },
+    plz:{
+        type    : Number,
+        required: true
+    },
+    stadt:{
+        type    : String,
+        required: true
+    },
+    email:{
+        type    : String,
+        unique  : true,
+        required: true
+    },
+    pass:{
+        type    : String,
+        required: true,
+        bcrypt  : true
+    }
+
+});
+
+module.exports = mongoose.model('User', UserSchema);
