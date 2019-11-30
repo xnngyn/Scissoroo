@@ -107,4 +107,4 @@ router.post('/insertuser', async(req, res) =>{
     };
     });
 
-    module.exports = users;
+    module.exports = router;
