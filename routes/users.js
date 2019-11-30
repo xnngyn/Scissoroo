@@ -5,13 +5,6 @@ var Provider = require('../models/provider');
 var bcrypt = require('bcrypt');
 const expressValidator = require('express-validator');
 
-// Get Hompage 
-router.get('/', function(req, res, next){
-    res.render('index', {
-        title: 'Home'
-    });
-})
-
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
     res.render('SignUp',{
