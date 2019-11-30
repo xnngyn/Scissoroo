@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); 
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', routes);         // all references in routes starts with /
+app.use('/users', users);     // all references in users starts with /users
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
