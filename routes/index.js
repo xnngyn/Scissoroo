@@ -8,7 +8,7 @@ var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongo
 
 // Get Homepage
 router.get('/', function(req, res, next){
-    res.render('index');
+    res.render('index', {title: 'Home'});
 });
 
 // Get Results

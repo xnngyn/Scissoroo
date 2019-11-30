@@ -5,22 +5,29 @@ var Provider = require('../models/provider');
 var bcrypt = require('bcrypt');
 const expressValidator = require('express-validator');
 
+// Get Hompage 
+router.get('/', function(req, res, next){
+    res.render('index', {
+        title: 'Home'
+    });
+})
+
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
     res.render('SignUp',{
-        'title': 'Register'
+        title: 'Register'
     });
 });
 // Get Sign In Page
 router.get('/signin', function(req, res, next){
     res.render('SignIn',{
-        'title': 'Login'
+        title: 'Login'
     });
 });
 // Get Sign Up Provider Page
 router.get('/signupprovider', function(req, res, next){
     res.render('SignUpProvider',{
-        'title': 'Register'
+        title: 'Register'
     });
 });
 // Get Logged In Page
