@@ -62,7 +62,7 @@ router.post('/insertuser', async(req, res) =>{
 
         newUser.save(newUser, function(err, user){
             if(err){
-                return next (err)
+                return (err)
             } else {
                 return res.redirect('/');
             }
