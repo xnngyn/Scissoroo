@@ -33,7 +33,7 @@ router.get('/registrationsuccessfull', function(req, res, next){
 });
 
 // insert user
-router.post('/insertuser', async(req, res) =>{
+router.post('/insertuser', function(req, res, next){
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
@@ -62,7 +62,7 @@ router.post('/insertuser', async(req, res) =>{
 
         newUser.save(function(err, user){
             if(err){
-                return (err)
+                return next(err)
             } else {
                 return res.redirect('/registrationsuccessfull');
             }
