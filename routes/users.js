@@ -46,7 +46,6 @@ router.post('/insertuser', function(req, res, next){
     var email = req.body.email;
     var pass = req.body.pass;
 
-    if(fname && lname && strasse && stadt && email && pass){
         var newUser = new User({
             fullname: fname,
             lastname: lname,
@@ -67,8 +66,6 @@ router.post('/insertuser', function(req, res, next){
                 return res.redirect('/registrationsuccessfull');
             }
         });
-
-    };
 });
 
     

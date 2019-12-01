@@ -1,10 +1,10 @@
 var mongoose = require("mongoose");
 
-var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?keepAlive=true&poolSize=30&autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000';
+var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
-var db = mongoose.connection;
+var db = mongoose.connection.db.collection('user');
 
 // User Schema
 var UserSchema = new mongoose.Schema({
