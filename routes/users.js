@@ -47,7 +47,7 @@ router.post('/insertuser', async(req, res) =>{
     var pass = req.body.pass;
 
     if(fname && lname && strasse && stadt && email && pass){
-        var newUser = {
+        var newUser = new User({
             fullname: fname,
             lastname: lname,
             birthdate: bdate,
@@ -58,13 +58,13 @@ router.post('/insertuser', async(req, res) =>{
             stadt: stadt,
             email: email,
             pass: hashedPassword
-        }
+        });
 
-        User.create(newUser, function(err, user){
+        newUser.save(newUser, function(err, user){
             if(err){
                 return next (err)
             } else {
-                return res.redirect('/users/registrationsuccessfull');
+                return res.redirect('/');
             }
         });
 
