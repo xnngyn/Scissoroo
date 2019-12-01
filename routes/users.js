@@ -57,7 +57,7 @@ router.post('/insertuser', async(req, res) =>{
             plz: plz,
             stadt: stadt,
             email: email,
-            pass: hashedPassword
+            pass: pass
         });
 
         newUser.save(newUser, function(err, user){
