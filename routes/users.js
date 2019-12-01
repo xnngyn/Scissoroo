@@ -63,7 +63,7 @@ router.post('/insertuser', function(req, res, next){
             if(err){
                 return next(err)
             } else {
-                return res.redirect('/registrationsuccessfull');
+                return res.redirect('/users/registrationsuccessfull');
             }
         });
 });
