@@ -46,6 +46,7 @@ router.post('/insertuser', function(req, res, next){
     var email = req.body.email;
     var pass = req.body.pass;
 
+    if(fname && lname && strasse && email && pass){
         var newUser = new User({
             fullname: fname,
             lastname: lname,
@@ -58,7 +59,7 @@ router.post('/insertuser', function(req, res, next){
             email: email,
             pass: pass
         });
-
+        
         var salt = 10;
 
 		bcrypt.hash(newUser.pass, salt, function(err,hash) {
@@ -76,7 +77,7 @@ router.post('/insertuser', function(req, res, next){
                 }
             });
         });
-
+    }
 });
 
     
