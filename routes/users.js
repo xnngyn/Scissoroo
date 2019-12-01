@@ -27,6 +27,10 @@ router.get('/signupprovider', function(req, res, next){
 router.get('/loggedIn', function(req, res, next){
     res.render('indexeingeloggt');
 });
+// Get Erfolgreiche Registrierung
+router.get('/registrationsuccessfull', function(req, res, next){
+    res.render('erfolgreg');
+});
 
 // insert user
 router.post('/insertuser', async(req, res) =>{

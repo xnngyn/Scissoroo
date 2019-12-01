@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 
-mongoose.connect('mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority');
+var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo.user?retryWrites=true&w=majority';
+
+mongoose.connect(monogDB, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
@@ -46,7 +48,8 @@ var UserSchema = new mongoose.Schema({
     pass:{
         type    : String,
         required: true,
-        bcrypt  : true
+        bcrypt  : true,
+        min: [7, 'password too short']
     }
 
 });
