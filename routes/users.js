@@ -61,11 +61,11 @@ router.post('/insertuser', function(req, res, next){
 
         var salt = 10;
 
-		bcrypt.hash(newUser.password,salt, function(err,hash) {
+		bcrypt.hash(newUser.pass, salt, function(err,hash) {
 			if(err) throw err;
 
 			//Set Hashed Password
-			newUser.password = hash;
+			newUser.pass = hash;
 
             // create new User
             newUser.save(function(err, user){
