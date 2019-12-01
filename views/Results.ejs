@@ -23,38 +23,61 @@
 		</div>
 	</nav>
 
-	<div>
-		<h3>Choose your Service</h3>
-		<input value="Your City">
-		<input type="radio" id="mc" name="Categorie" value="Man cut">
-		<label for="mc">Man cut</label>
-		<input type="radio" id="wc" name="Categorie" value="Woman cut">
-		<label for="mc">Woman cut</label>
-		<input type="radio" id="w" name="Categorie" value="Washing">
-		<label for="w">Washing</label>
-		<input type="radio" id="dy" name="Categorie" value="Dyeing">
-		<label for="dy">Dyeing</label>
-		<input type="radio" id="ba" name="Categorie" value="Barber">
-		<label for="ba">Barber</label>
-		<input type="radio" id="pe" name="Categorie" value="Perm">
-		<label for="pe">Perm</label>
-		<input type="radio" id="hm" name="Categorie" value="Head Massage">
-		<label for="mc">Head Massage</label>
-		<label>Sort by
-    		<select>
-  				<option value="?">Best rated</option>
-  				<option value="?">Lowest price</option>
-  				<option value="?">Highest price</option>
-  				<option value="?">Smallest distance</option>
-			</select>
-  		</label>
-	</div>
-	<section class="get">
-		<div>
-		<h2>Friseure</h2>
-		<a href="/get-data">alle Friseure laden</a>
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h3 class="display-6">Choose your Service</h3>
+			</div>
 		</div>
-	</section>
-</body>
+	</div>
+	<div class="container-fluid padding">
+			<div class="row text-center padding">
+			  <div class="col-xs-12 col-sm-4 col-sm-3 text-left">
+					<div class="d-flex">
+					  <input type="search" placeholder="Your City"/> 
+					  <button class="btn btn-light btn-sm" type="submit"><i class="fa fa-search"></i>&#x1F50D </button> <!--&#x1F50D = Lupe-->
+				 	</div>
+					<div>
+						<input type="checkbox" id="mc" name="Categorie" value="Man cut">
+						<label for="mc">Man cut</label>
+						<input type="checkbox" id="wc" name="Categorie" value="Woman cut">
+						<label for="mc">Woman cut</label>
+						<input type="checkbox" id="w" name="Categorie" value="Washing">
+						<label for="w">Washing</label>
+						<input type="checkbox" id="dy" name="Categorie" value="Dyeing">
+						<label for="dy">Dyeing</label>
+						<input type="checkbox" id="ba" name="Categorie" value="Barber">
+						<label for="ba">Barber</label>
+						<input type="checkbox" id="pe" name="Categorie" value="Perm">
+						<label for="pe">Perm</label>
+						<input type="checkbox" id="hm" name="Categorie" value="Head Massage">
+						<label for="mc">Head Massage</label>
+						<label>Sort by
+							<select>
+								<option value="?">Best rated</option>
+								<option value="?">Lowest price</option>
+								<option value="?">Highest price</option>
+								<option value="?">Smallest distance</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-5">
+					<section class="get">
+						<div>
+						<h2>Friseure</h2>
+						<a href="/get-data">alle Friseure laden</a>
+						</div>
+					</section>
+				</div>
+				<div class="col-sm-12 col-md-3">
+				  <h2>Map</h2>
+				  <p>Your position</p>
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+	</body>	
 
 </html>

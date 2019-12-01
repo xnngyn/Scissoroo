@@ -1,16 +1,16 @@
 html,body {
 	height: 100%;
 	background-color: gray;
-	box-sizing: border-box;
-	
+	/* box-sizing: border-box; */
+	color: white;
 	
 	
 }
 
-
+/*
 *, *:before, *:after {
-  box-sizing: inherit;
-}
+   box-sizing: inherit; 
+} */
 
 /* Nachfolgendes zum testen */
 #createAcc {
