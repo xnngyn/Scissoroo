@@ -20,3 +20,7 @@ html, body {
 	text-align: center;
 	/* position: center center; */
 }
+
+input:placeholder-shown {
+	text-align: center;
+}
