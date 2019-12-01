@@ -46,26 +46,11 @@ router.post('/insertuser', async(req, res) =>{
     var email = req.body.email;
     var pass = req.body.pass;
 
-    // Form Validation
-    req.checkBody( 'fname','First Name Field is Required').notEmpty();
-    req.checkBody( 'lname','Last Name Field is Required').notEmpty();
-    req.checkBody( 'strasse','Street Field is Required').notEmpty();
-    req.checkBody( 'Stadt','City Field is Required').notEmpty();
-	req.checkBody( 'email','Email Field is Required').notEmpty();
-	req.checkBody('email','Email not Valid').isEmail();
-    req.checkBody('password','Password Field is Required').notEmpty();
-    
-    // Check for Errors
-    var errors = req.validationErrors();
-
-    if(errors){
-        return next(err)
-    } else {
-        //create new User
-        var newUser = new User({
+    if(fname && lname && strasse && stadt && email && pass){
+        var newUser = {
             fullname: fname,
             lastname: lname,
-            birthdate: gdatum,
+            birthdate: bdate,
             sex: sex,
             strasse: strasse,
             hausnr: hausnr,
@@ -73,29 +58,19 @@ router.post('/insertuser', async(req, res) =>{
             stadt: stadt,
             email: email,
             pass: hashedPassword
-        });
-            console.log( newUser)
-            //hash password
-            const salt = await bcrypt.genSalt();
-            bcrypt.hash(newUser.pass, salt, function(err, hash){
-                if(err) throw err;
-
-                // Set hashed password
-                newUser.pass = hash;
-
-                //Create New User
-                newUser.save(newUser, function(err, user){
-                    if(err) throw err;
-                    console.log(user);
-                });
-            
-
-            res.flash('success','Registrierung erfolgreich!');
-            res.redirect('/loggedIn');
-            });
         }
 
-    });
+        User.create(newUser, function(err, user){
+            if(err){
+                return next (err)
+            } else {
+                return res.redirect('/users/registrationsuccessfull');
+            }
+        });
+
+    };
+});
+
     
     // insert provider
     router.post('/insertprovider', function(req, res, next){

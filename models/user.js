@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/users?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/users';
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
