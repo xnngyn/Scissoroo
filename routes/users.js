@@ -50,7 +50,7 @@ router.post('/insertuser', async(req, res) =>{
         var newUser = {
             fullname: fname,
             lastname: lname,
-            birthdate: gdatum,
+            birthdate: bdate,
             sex: sex,
             strasse: strasse,
             hausnr: hausnr,
