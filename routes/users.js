@@ -59,13 +59,24 @@ router.post('/insertuser', function(req, res, next){
             pass: pass
         });
 
-        newUser.save(function(err, user){
-            if(err){
-                return next(err)
-            } else {
-                return res.redirect('/users/registrationsuccessfull');
-            }
+        var salt = 10;
+
+		bcrypt.hash(newUser.password,salt, function(err,hash) {
+			if(err) throw err;
+
+			//Set Hashed Password
+			newUser.password = hash;
+
+            // create new User
+            newUser.save(function(err, user){
+                if(err){
+                    return next(err)
+                 } else {
+                    return res.redirect('/users/registrationsuccessfull');
+                }
         });
+
+
 });
 
     
