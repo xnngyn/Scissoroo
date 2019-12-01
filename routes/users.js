@@ -60,7 +60,7 @@ router.post('/insertuser', async(req, res) =>{
             pass: pass
         });
 
-        newUser.save(newUser, function(err, user){
+        newUser.save(function(err, user){
             if(err){
                 return (err)
             } else {

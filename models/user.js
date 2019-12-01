@@ -2,9 +2,7 @@ var mongoose = require("mongoose");
 
 var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?keepAlive=true&poolSize=30&autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000';
 
-mongoose.connect(mongoDB, { useNewUrlParser: true }, function(err, db){
-    db.collection('user');
-});
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
