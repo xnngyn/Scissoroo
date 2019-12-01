@@ -8,7 +8,7 @@ const expressValidator = require('express-validator');
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
     res.render('SignUp',{
-        title: 'Register'
+        'title': 'Register'
     });
 });
 // Get Sign In Page
@@ -64,7 +64,7 @@ router.post('/insertuser', async(req, res) =>{
             if(err){
                 return (err)
             } else {
-                return res.redirect('/');
+                return res.redirect('/registrationsuccessfull');
             }
         });
 

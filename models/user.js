@@ -1,8 +1,10 @@
 var mongoose = require("mongoose");
 
-var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/users';
+var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo';
 
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true }, function(err, db){
+    db.collection('user');
+});
 
 var db = mongoose.connection;
 
