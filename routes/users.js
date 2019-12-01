@@ -74,8 +74,8 @@ router.post('/insertuser', function(req, res, next){
                  } else {
                     return res.redirect('/users/registrationsuccessfull');
                 }
+            });
         });
-
 
 });
 
