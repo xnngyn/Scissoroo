@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo.user?retryWrites=true&w=majority';
 
-mongoose.connect(monogDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
