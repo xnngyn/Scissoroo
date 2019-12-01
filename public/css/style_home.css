@@ -24,3 +24,12 @@ html, body {
 input:placeholder-shown {
 	text-align: center;
 }
+
+footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	color: black;
+	padding-top: 2rem;
+}
