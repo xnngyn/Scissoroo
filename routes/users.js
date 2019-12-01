@@ -64,7 +64,7 @@ router.post('/insertuser', async(req, res) =>{
             if(err){
                 return next (err)
             } else {
-                return res.redirect('/registrationsuccessfull');
+                return res.redirect('/users/registrationsuccessfull');
             }
         });
 
