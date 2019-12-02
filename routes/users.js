@@ -3,7 +3,6 @@ var router = express.Router();
 var User = require('../models/user');
 var Provider = require('../models/provider');
 var bcrypt = require('bcrypt');
-const expressValidator = require('express-validator');
 
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){

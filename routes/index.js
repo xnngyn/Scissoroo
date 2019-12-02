@@ -52,25 +52,6 @@ router.get('/get-data', function(req, res, next){
     });
 });
 
-// user login
-router.post('/login', async(req, res)=>{
-    mongodb.connect(url, { useNewUrlParser : true}, function(err, client) {
-        assert.equal(null, err);
-        var db = client.db('scissoroo');
-        var user = db.collection('user').find(user => user.email = req.body.emaillogin);
-        if(user == null){
-            return res.status(400).send('Cannot find user')
-        }
-        try{
-            bcrypt.compare(req.body.passlogin, user.pass)
-        } catch {
-            res.status(500).send()
-        }
-        client.close();
-        });
-});
-    
-
 // update
 router.post('/updateuser', function(req, res, next){
 var user = {
