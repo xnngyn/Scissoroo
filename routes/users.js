@@ -96,7 +96,7 @@ router.post('/insertuser', function(req, res, next){
                     return next(err);
                 } else {
                     req.session.userId = user._id;
-                    return res.render('/loggedIn');
+                    return res.redirect('/users/loggedIn');
                 }
             })
         }
