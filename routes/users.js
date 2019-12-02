@@ -21,7 +21,10 @@ router.get('/result', function(req, res, next){
       }
     });
 });
-
+// Get Profile Page
+router.get('/profile', function(req, res, next){
+    res.render('Profile');
+});
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
     res.render('SignUp',{
