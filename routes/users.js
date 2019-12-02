@@ -35,7 +35,7 @@ router.get('/loggedIn', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          return res.redirect('indexeingeloggt');
+          return res.redirect('/users/indexeingeloggt');
         }
       }
     });
