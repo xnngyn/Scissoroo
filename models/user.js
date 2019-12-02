@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var bcrypt = require('bcrypt');
 
 var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';
 
@@ -73,6 +74,7 @@ UserSchema.statics.authenticate = function (email, pass, callback) {
           }
         })
       });
-  }
+  };
 
-module.exports = mongoose.model('User', UserSchema);
+var User = mongoose.model('User', UserSchema);
+module.exports = User;
