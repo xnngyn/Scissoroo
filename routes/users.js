@@ -89,7 +89,7 @@ router.post('/insertuser', function(req, res, next){
     // Login
     router.post('/login', function(req, res, next){
         if(req.body.emaillogin && req.body.passlogin){
-            User.authenticate(req.body.emaillogin, req.body.passlogin, function(err, user){
+            User.authenticate(req.body.emaillogin, req.body.passlogin, function(error, user){
                 if(error || !user){
                     var err = new Error('Falsche Email oder Passwort');
                     err.status = 401;
