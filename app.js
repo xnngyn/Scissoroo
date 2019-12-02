@@ -6,6 +6,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session				= 	require('express-session');
 
 // set port
 const port = process.env.PORT || 8080;
