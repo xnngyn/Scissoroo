@@ -34,6 +34,10 @@ router.get('/signin', function(req, res, next){
         title: 'Login'
     });
 });
+// Get Passwort vergessen Page
+router.get('/forgot', function(req, res, next){
+    res.render('Passverg');
+})
 // Get Sign Up Provider Page
 router.get('/signupprovider', function(req, res, next){
     res.render('SignUpProvider',{
