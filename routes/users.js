@@ -86,6 +86,10 @@ router.post('/insertuser', function(req, res, next){
     }
 });
 
+    // Login
+    router.post('/login', function(req, res, next){
+        
+    });
     
     // insert provider
     router.post('/insertprovider', function(req, res, next){
@@ -93,5 +97,7 @@ router.post('/insertuser', function(req, res, next){
         
     };
     });
+
+    // Logout
 
     module.exports = router;
