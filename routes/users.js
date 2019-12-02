@@ -25,7 +25,21 @@ router.get('/signupprovider', function(req, res, next){
 });
 // Get Logged In Page
 router.get('/loggedIn', function(req, res, next){
-    res.render('indexeingeloggt');
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        return next(error);
+      } else {
+        if (user === null) {
+          var err = new Error('Not authorized! Go back!');
+          err.status = 400;
+          return next(err);
+        } else {
+          return res.redirect('indexeingeloggt');
+        }
+      }
+    });
+    
 });
 // Get Erfolgreiche Registrierung
 router.get('/registrationsuccessfull', function(req, res, next){
