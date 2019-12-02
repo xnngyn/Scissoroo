@@ -141,5 +141,16 @@ router.post('/insertuser', function(req, res, next){
     });
 
     // Logout
-
+    router.get('/logout', function (req, res, next) {
+        if (req.session) {
+            // delete session object
+        req.session.destroy(function (err) {
+            if (err) {
+                return next(err);
+             } else {
+                return res.redirect('/');
+            }
+        });
+    }
+  });
     module.exports = router;
