@@ -54,4 +54,25 @@ var UserSchema = new mongoose.Schema({
 
 });
 
+//authenticate input against database
+UserSchema.statics.authenticate = function (email, pass, callback) {
+    User.findOne({ email: email })
+      .exec(function (err, user) {
+        if (err) {
+          return callback(err)
+        } else if (!user) {
+          var err = new Error('User not found.');
+          err.status = 401;
+          return callback(err);
+        }
+        bcrypt.compare(pass, user.pass, function (err, result) {
+          if (result === true) {
+            return callback(null, user);
+          } else {
+            return callback();
+          }
+        })
+      });
+  }
+
 module.exports = mongoose.model('User', UserSchema);
