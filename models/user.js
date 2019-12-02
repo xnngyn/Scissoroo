@@ -73,6 +73,7 @@ UserSchema.statics.authenticate = function (email, pass, callback) {
           }
         })
       });
-  }
+  };
+
 
 module.exports = mongoose.model('User', UserSchema);
