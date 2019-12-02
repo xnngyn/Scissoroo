@@ -8,6 +8,16 @@ html, body {
 	background-position: center;
 }
 
+mark {
+	background-color: yellow;
+}
+
+#h002 {
+	color: white;
+	background-color: hsla(0,0%,50%,0.75);
+	text-align: center;
+}
+
 #h001 {
 	color: white;
 	background-color: hsla(0,0%,50%,0.5);
