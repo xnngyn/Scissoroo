@@ -88,7 +88,18 @@ router.post('/insertuser', function(req, res, next){
 
     // Login
     router.post('/login', function(req, res, next){
-
+        if(req.body.emaillogin && req.body.passlogin){
+            User.authenticate(req.body.emaillogin, req.body.passlogin, function(err, user){
+                if(error || !user){
+                    var err = new Error('Falsche Email oder Passwort');
+                    err.status = 401;
+                    return next(err);
+                } else {
+                    req.session.userId = user._id;
+                    return res.render('/users/loggedIn');
+                }
+            })
+        }
     });
     
     // insert provider
