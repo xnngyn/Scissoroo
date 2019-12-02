@@ -4,7 +4,7 @@ var mongodb = require('mongodb').MongoClient;
 var assert = require('assert');
 const bcrypt = require('bcrypt');
 
-var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/test?retryWrites=true&w=majority';
+var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';
 
 // Get Homepage
 router.get('/', function(req, res, next){

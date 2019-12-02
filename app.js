@@ -6,7 +6,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var session				= 	require('express-session');
+var session	=	require('express-session');
+var MongoStore = require('connect-mongodb-session')(session);
 
 // set port
 const port = process.env.PORT || 8080;
@@ -25,7 +26,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'work hard',
   resave: true,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: new MongoStore({
+      uri: 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority',
+      collection: 'mySessions'
+  })
 }));
 
 app.use('/', routes);         // all references in routes starts with /
