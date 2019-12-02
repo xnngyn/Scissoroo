@@ -9,7 +9,18 @@ var url = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongo
 
 // Get Homepage
 router.get('/', function(req, res, next){
-    res.render('index', {title: 'Home'});
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        return next(error);
+      } else {
+        if (user === null) {
+          return res.render('index', {'title': 'Home'});
+        } else {
+          return res.render('indexeingeloggt', {'title' : 'Home'});
+        }
+      }
+    });
 });
 
 // Get Detailansicht
