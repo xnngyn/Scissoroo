@@ -75,7 +75,7 @@ router.post('/insertuser', function(req, res, next){
                  } else {
                     req.session.userId = user._id;
                     req.session.save();
-                    return res.redirect('/');
+                    return res.redirect('/users/registrationsuccessfull');
                 }
             });
         });
