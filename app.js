@@ -20,6 +20,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); 
 
+//use sessions for tracking logins
+app.use(session({
+  secret: 'work hard',
+  resave: true,
+  saveUninitialized: false
+}));
+
 app.use('/', routes);         // all references in routes starts with /
 app.use('/users', users);     // all references in users starts with /users
 
