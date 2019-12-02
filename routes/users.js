@@ -46,7 +46,7 @@ router.post('/insertuser', function(req, res, next){
     var email = req.body.email;
     var pass = req.body.pass;
 
-    if(fname && lname && bdate && sex && strasse && hausnr && plz && stadt && email && pass){
+    if(fname && lname && bdate && strasse && hausnr && plz && stadt && email && pass){
         var newUser = new User({
             fullname: fname,
             lastname: lname,
