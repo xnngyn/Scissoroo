@@ -13,7 +13,20 @@ router.get('/', function(req, res, next){
 
 // Get Results
 router.get('/result', function(req, res, next){
-    res.render('Results');
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        return next(error);
+      } else {
+        if (user === null) {
+          var err = new Error('Not authorized! Go back!');
+          err.status = 400;
+          return next(err);
+        } else {
+          return res.render('Results');
+        }
+      }
+    });
 });
 // Get Detailansicht
 router.get('/detailansicht', function(req, res, next){
