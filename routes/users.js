@@ -36,7 +36,7 @@ router.get('/profile', function(req, res, next){
         } else {
           var curruser = user;
           return res.render('Profile',{
-            fname: curruser.fname
+            fname: curruser.fullname
           });
         }
       }
