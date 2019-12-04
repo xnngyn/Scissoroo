@@ -39,7 +39,7 @@ router.get('/profile', function(req, res, next){
           return res.render('Profile',{
             fname: curruser.fullname,
             lname: curruser.lastname,
-            gdate: dateFormat(curruser.birthdate, "yyyy-mm-dd"),
+            gdate: dateFormat(curruser.birthdate, "dd.mm.yyyy"),
             strasse: curruser.strasse,
             nr: curruser.hausnr,
             plz: curruser.plz,
