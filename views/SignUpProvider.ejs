@@ -35,11 +35,10 @@
 			<input id="email" type="email" name="email" placeholder="Email"/><br/>
 			<input id="angestellte" type="text" name="angestellte" placeholder="Anzahl der Friseure">
 			<input id="bild" type="image" name="bild" placeholder="Bild">
-			<input list="parkplatz" name="parkplatz" id="parkplatz" type="text"/>
-  				<datalist id="parkplatzt"><br/>
-    				<option value="Ja">
-    				<option value="Nein">
-  				</datalist>
+			<select id = "parkplätze" name="parkplätze">
+				<option value="Nein" selected>Nein</option>
+				<option value="Ja">Ja</option>
+			</select><br/>
   			<input id="mfriseur" type="checkbox" name="mfriseur" />Männerschnitt
   			<input id="ffriseur" type="checkbox" name="ffriseur" />Frauenschnitt
   			<input id="hwaschen" type="checkbox" name="hwaschen" />Waschen
