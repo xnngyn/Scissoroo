@@ -39,7 +39,7 @@ router.get('/profile', function(req, res, next){
           return res.render('Profile',{
             fname: curruser.fullname,
             lname: curruser.lastname,
-            gdate: curruser.birthdate,
+            gdate: dateFormat(curruser.birthdate, "yyyy-mm-dd"),
             strasse: curruser.strasse,
             nr: curruser.hausnr,
             plz: curruser.plz,
@@ -103,7 +103,7 @@ router.post('/insertuser', function(req, res, next){
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
-    var bdate = dateFormat(req.body.gdatum, "yyyy-mm-dd");
+    var bdate = req.body.gdatum;
     var sex = req.body.sex;
     var strasse = req.body.strasse;
     var hausnr = req.body.hausnr;
