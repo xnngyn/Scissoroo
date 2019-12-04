@@ -3,6 +3,7 @@ var router = express.Router();
 var User = require('../models/user');
 var Provider = require('../models/provider');
 var bcrypt = require('bcrypt');
+var dateFormat = require('dateformat');
 
 // Get Results
 router.get('/result', function(req, res, next){
@@ -102,7 +103,7 @@ router.post('/insertuser', function(req, res, next){
     //Get Form Values
     var fname = req.body.fname;
     var lname = req.body.lname;
-    var bdate = req.body.gdatum;
+    var bdate = dateFormat(req.body.gdatum, "yyyy-mm-dd");
     var sex = req.body.sex;
     var strasse = req.body.strasse;
     var hausnr = req.body.hausnr;
