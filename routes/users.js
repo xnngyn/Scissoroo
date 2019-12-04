@@ -36,14 +36,7 @@ router.get('/profile', function(req, res, next){
         } else {
           var user = req.user;
           return res.render('Profile',{
-            fname: user.fname,
-            lname: user.lastname,
-            bdate: user.birthdate,
-            strasse: user.strasse,
-            nr: user.hausnr,
-            plz: user.plz,
-            stadt: user.stadt,
-            email: user.email
+            profile: user
           });
         }
       }
