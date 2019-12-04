@@ -34,9 +34,9 @@ router.get('/profile', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          var user = req.user;
+          var curruser = req.user;
           return res.render('Profile',{
-            profile: user
+            fname: curruser.fullname
           });
         }
       }
