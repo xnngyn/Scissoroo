@@ -83,7 +83,10 @@ router.get('/loggedIn', function(req, res, next){
 router.get('/registrationsuccessfull', function(req, res, next){
     res.render('erfolgreg');
 });
-
+// Get Erfolgreiche Registrierung
+router.get('/editprofile', function(req, res, next){
+  res.render('ProfileBearbeiten');
+});
 // insert user
 router.post('/insertuser', function(req, res, next){
     //Get Form Values
@@ -150,6 +153,11 @@ router.post('/insertuser', function(req, res, next){
                 }
             })
         }
+    });
+
+    // Get User Data
+    router.get('loaduserinf', function(req, res, next){
+      var output = '<html><header><title>Todo List from DB</title></header><body>';
     });
 
     // Logout
