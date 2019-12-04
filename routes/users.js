@@ -17,14 +17,8 @@ router.get('/result', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          // load all data
-          Provider.find({}, function(err, data){
-            if(error){
-              return next(error)
-            } else{
-              return res.render('Results', {providers : data});
-            }
-          });
+          // load all data            
+          return res.render('Results');
         }
       }
     });
