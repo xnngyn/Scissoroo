@@ -34,12 +34,10 @@ router.get('/profile', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          return res.render('Profile');
+          return res.render('Profile',{username: 'Illya Ostapchuk'});
         }
       }
     });
-    var output = '<html><header><title>Profilinformationen</title></header><body>';
-    res.send(output);
 });
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
@@ -156,12 +154,6 @@ router.post('/insertuser', function(req, res, next){
             })
         }
     });
-
-    // Get User Data
-    router.get('loaduserinf', function(req, res, next){
-      var output = '<html><header><title>Todo List from DB</title></header><body>';
-    });
-
     // Logout
     router.get('/logout', function (req, res, next) {
         if (req.session) {
