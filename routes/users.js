@@ -21,6 +21,7 @@ router.get('/result', function(req, res, next){
       }
     });
 });
+
 // Get Profile Page
 router.get('/profile', function(req, res, next){
     User.findById(req.session.userId)
@@ -149,13 +150,6 @@ router.post('/insertuser', function(req, res, next){
                 }
             })
         }
-    });
-    
-    // insert provider
-    router.post('/insertprovider', function(req, res, next){
-    var prov = {
-        
-    };
     });
 
     // Logout
