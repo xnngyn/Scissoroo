@@ -108,7 +108,7 @@ router.post('/insertuser', function(req, res, next){
     var strasse = req.body.strasse;
     var hausnr = req.body.hausnr;
     var plz = req.body.plz;
-    var stadt = req.body.plz;
+    var stadt = req.body.stadt;
     var email = req.body.email;
     var pass = req.body.pass;
 
