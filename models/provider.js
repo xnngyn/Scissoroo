@@ -4,7 +4,7 @@ var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.m
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
-var db = mongoose.connection.db.collection('friseure');
+var db = mongoose.connection;
 
 // User Schema
 var ProviderSchema = new mongoose.Schema({
