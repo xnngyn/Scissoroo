@@ -18,8 +18,13 @@ router.get('/result', function(req, res, next){
           return next(err);
         } else {
           // load all data
-          
-          return res.render('Results');
+          Provider.find({}, function(err, data){
+            if(error){
+              return next(error)
+            } else{
+              return res.render('Results', {providers : data});
+            }
+          });
         }
       }
     });
