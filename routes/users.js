@@ -34,7 +34,17 @@ router.get('/profile', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          return res.render('Profile',{username: 'Illya Ostapchuk'});
+          var user = req.user;
+          return res.render('Profile',{
+            fname: user.fullname,
+            lname: user.lastname,
+            bdate: user.birthdate,
+            strasse: user.strasse,
+            nr: user.hausnr,
+            plz: user.plz,
+            stadt: user.stadt,
+            email: user.email
+          });
         }
       }
     });
