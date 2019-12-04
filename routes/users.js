@@ -38,6 +38,8 @@ router.get('/profile', function(req, res, next){
         }
       }
     });
+    var output = '<html><header><title>Profilinformationen</title></header><body>';
+    res.send(output);
 });
 // Get Sign Up Page
 router.get('/signup', function(req, res, next){
