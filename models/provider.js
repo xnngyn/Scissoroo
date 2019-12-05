@@ -16,5 +16,5 @@ var ProviderSchema = new mongoose.Schema({
     }
 });
 
-var Provider = mongoose.model('Provider', UserSchema);
+var Provider = mongoose.model('Provider', ProviderSchema);
 module.exports = Provider;
