@@ -17,8 +17,17 @@ router.get('/result', function(req, res, next){
           err.status = 400;
           return next(err);
         } else {
-          // load all data            
-          return res.render('Results');
+          // load all data      
+          var provider = new Provider().db.collection('friseure');
+          provider.find({}, function(err, foundData){
+            if(err){
+              console.log(err);
+              res.status(500).send();
+            } else {
+              res.send(foundData);
+            }
+          });
+          //return res.render('Results');
         }
       }
     });
