@@ -18,7 +18,7 @@ router.get('/result', function(req, res, next){
           return next(err);
         } else {
           // load all data      
-          var provider = new Provider();
+          var provider = new Provider().collection('friseure');
           provider.find({}, function(err, foundData){
             if(err){
               console.log(err);
