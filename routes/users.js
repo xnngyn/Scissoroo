@@ -25,7 +25,7 @@ router.get('/result', function(req, res, next){
               res.status(500).send();
             } else {
               res.render('Results', {
-                friseurname: foundData.Name
+                friseurname: foundData
               });
             }
           });
