@@ -18,7 +18,7 @@ router.get('/result', function(req, res, next){
           return next(err);
         } else {
           // load all data      
-          Provider.find({}, function(err, foundData){
+          User.find({}, function(err, foundData){
             if(err){
               console.log(err);
               res.status(500).send();
