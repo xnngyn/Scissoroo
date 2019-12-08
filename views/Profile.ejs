@@ -17,8 +17,8 @@
 		<nav class="navbar navbar-light bg-light">
 		  <a class="navbar-brand" href="/"><img src="https://raw.githubusercontent.com/xnngyn/Scissoroo/master/public/images/Scissoroo_Logo.jpg" width="100" height="100" alt=""></a> <!--../Bilder/Scissoroo_Logo.jpg-->
 			<form class="form-inline">
-				<a href="">Profile</a>
-				<a href=""><img src="/images/settings.png"></a>
+				<a class="btn btn-secondary mr-sm-2" tabindex="-1" role="button" aria-disabled="true">Mein Profil</a>
+				<a class="btn btn-secondary"  href="/users/logout" role="button">Ausloggen</a>
 			</form>
 		</nav>
 		<h3>Mein Profil</h3>
@@ -27,7 +27,7 @@
 		Email: <label id="email" name="email"><%= email %></label><br/>
 		Geburtsdatum: <label id="gebdatum" name="gebdatum"><%= gdate %></label><br/>
 		Strasse: <label id="strasse" name="strasse"><%= strasse %></label><br/>
-		Hausummer: <label id="hausnr" name="hausnr"><%= nr %></label><br/>
+		Hausnummer: <label id="hausnr" name="hausnr"><%= nr %></label><br/>
 		PLZ: <label id="plz" name="plz"></label><%= plz %><br/>
 		Stadt: <label id="stadt" name="stadt"><%= stadt %></label><br/>
 		<a href="/users/editprofile" role="button">Profil bearbeiten</a><br/>
