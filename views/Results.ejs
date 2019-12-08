@@ -76,19 +76,16 @@
 											<h3><a href="" title=""><%= item.Name %></a></h3>
 											<label><%= item.Adresse %></label><br/>
 											<label><%= item.Email %></label><br/>
-											<label><%= item.Telefon %></label><br/>
-											<label><%= item.Webseite %></label><br/>
+											<label>Telefon: <%= item.Telefon %></label><br/>
+											<label>Website: <%= item.Webseite %></label><br/>
 											<label>Anzahl Mitarbeiter: <%= item.Mitarbeiter %></label><br/>
 											<label>Anzahl Parkplätze: <%= item.Parkplaetze %></label><br/>
 										</div>																			
 									</div>
-									<div class="row text-center padding border">
-										<div class="col-12">
-											<label>Öffnungszeiten</label>
-										</div>
 									</div>										
 									<div class="row text-center padding border">
 										<div class="col-xs-12 col-sm-6 border">
+											<label>Öffnungszeiten</label>
 											Montag: <%= item.Montag %><br>
 											Dienstag: <%= item.Dienstag %><br>
 											Mittwoch: <%= item.Mittwoch %></p>
@@ -100,6 +97,7 @@
 										Sonntag: <%= item.Sonntag %></p>
 										</div>
 									</div>	
+									<hr>
 							</article>
 							<% }) %>
 						<% } %>
