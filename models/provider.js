@@ -13,6 +13,21 @@ var ProviderSchema = new mongoose.Schema({
     },    
     Adresse:{
         type    : String
+    },
+    Email:{
+        type    : String
+    },
+    Telefon:{
+        type    : Number
+    },
+    Webseite:{
+        type    : String
+    },
+    Mitarbeiter:{
+        type    : Number
+    },
+    Parkplaetze:{
+        type    : Number
     }
 }, { collection: 'friseure'});
 
