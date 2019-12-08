@@ -64,6 +64,20 @@
 				</div>
 				<div class="col-xs-12 col-sm-8 col-md-6">
 					<section class="get">
+						<% if(friseure!=null) { %>
+							<table>
+							<tr>
+								<th>Name</th>
+								<th>Adresse</th>
+							</tr>
+							<% friseure.forEach(function(item){ %>
+							<tr>
+								<td><%= item.Name%></td>
+								<td><%= item.Adresse %></td>							
+							</tr>
+							<% }) %>
+							</table>
+							<% } %>
 						<h2>Alle Friseure</h2>
 						<article>
 							<h3><a href="" title="">Friseurname</a></h3>

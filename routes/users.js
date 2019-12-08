@@ -23,8 +23,7 @@ router.get('/result', function(req, res, next){
               console.log(err);
               res.status(500).send();
             } else {
-              res.render('Results');
-              res.send(foundData);
+              res.render('Results', { friseure: foundData});
             }
           });
         }
