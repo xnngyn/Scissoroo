@@ -28,7 +28,28 @@ var ProviderSchema = new mongoose.Schema({
     },
     Parkplaetze:{
         type    : Number
-    }
+    },
+    Montag:{
+        type    : String
+    },
+    Dienstag:{
+        type    : String
+    },
+    Mittwoch:{
+        type    : String
+    },
+    Donnerstag:{
+        type    : String
+    },
+    Freitag:{
+        type    : String
+    },
+    Samstag:{
+        type    : String
+    },
+    Sonntag:{
+        type    : String
+    },
 }, { collection: 'friseure'});
 
 //fetch data
