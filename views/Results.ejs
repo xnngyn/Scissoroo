@@ -69,11 +69,22 @@
 							<tr>
 								<th>Name</th>
 								<th>Adresse</th>
+								<th>Email</th>
+								<th>Telefon</th>
+								<th>Webseite</th>
+								<th>Mitarbeiter</th>
+								<th>Parkplätze</th>
 							</tr>
 							<% friseure.forEach(function(item){ %>
 							<tr>
 								<td><%= item.Name %></td>
-								<td><%= item.Adresse %></td>							
+								<td><%= item.Adresse %></td>
+								<td><%= item.Email %></td>
+								<td><%= item.Telefon %></td>
+								<td><%= item.Webseite %></td>
+								<td><%= item.Mitarbeiter %></td>
+								<td><%= item.Parkplaetze %></td>
+
 							</tr>
 							<% }) %>
 							</table>
