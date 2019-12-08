@@ -16,5 +16,8 @@ var ProviderSchema = new mongoose.Schema({
     }
 });
 
-var Provider = mongoose.model('Provider', ProviderSchema);
+//fetch data
+
+
+var Provider = mongoose.model('friseure', ProviderSchema);
 module.exports = Provider;
