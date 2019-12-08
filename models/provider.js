@@ -8,10 +8,10 @@ var db = mongoose.connection;
 
 // User Schema
 var ProviderSchema = new mongoose.Schema({
-    Name:{
+    Bezeichnung:{
         type    : String
     },    
-    Adresse:{
+    Preis:{
         type    : String
     }
 });
@@ -19,5 +19,5 @@ var ProviderSchema = new mongoose.Schema({
 //fetch data
 
 
-var Provider = mongoose.model('friseure', ProviderSchema);
+var Provider = mongoose.model('Service', ProviderSchema);
 module.exports = Provider;
