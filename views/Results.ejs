@@ -64,6 +64,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-8 col-md-6">
 					<section class="get">
+							<h2>Alle Friseure</h2>
 						<% if(friseure!=null) { %>
 							<table>
 							<tr>
@@ -84,28 +85,23 @@
 								<td><%= item.Webseite %></td>
 								<td><%= item.Mitarbeiter %></td>
 								<td><%= item.Parkplaetze %></td>
-
 							</tr>
 							<% }) %>
 							</table>
-							<% } %>
-						<h2>Alle Friseure</h2>
-						<article>
-							<h3><a href="" title="">Friseurname</a></h3>
+							
+							<% friseure.forEach(function(item){ %>
+							<article>
+							<h3><a href="" title=""><%= item.Name %></a></h3>
 							<img src="" alt="" />
-							<p>Adresse</p>
-							<p>Email</p>
-							<p>Telefonnummer</p>
-							<p>Webseite</p>
-						</article>
-						<article>
-							<h3><a href="" title="">Friseurname</a></h3>
-							<img src="" alt=""/>
-							<p>Adresse</p>
-							<p>Email</p>
-							<p>Telefonnummer</p>
-							<p>Webseite</p>
-						</article>
+							<p><%= item.Adresse %></p>
+							<p><%= item.Email %></p>
+							<p><%= item.Telefon %></p>
+							<p><%= item.Webseite %></p>
+							<p><%= item.Mitarbeiter %></p>
+							<p><%= item.Parkplaetze %></p>
+							</article>
+							<% }) %>
+							<% } %>
 					</section>
 				</div>
 				<div class="col-sm-12 col-md-3">
