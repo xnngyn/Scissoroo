@@ -24,7 +24,7 @@ router.get('/result', function(req, res, next){
               res.status(500).send();
             } else {
               res.render('Results');
-                console.log(foundData);
+              res.send(foundData);
             }
           });
         }
