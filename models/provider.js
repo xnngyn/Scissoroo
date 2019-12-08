@@ -14,9 +14,9 @@ var ProviderSchema = new mongoose.Schema({
     Adresse:{
         type    : String
     }
-});
+}, { collection: 'friseure'});
 
 //fetch data
 
-var Provider = mongoose.model('friseure', ProviderSchema);
+var Provider = mongoose.model('Provider', ProviderSchema);
 module.exports = Provider;
