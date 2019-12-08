@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/providers?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://scissoroo_admin:scissoroo_admin@scissoroodb-vjd2z.mongodb.net/scissoroo?retryWrites=true&w=majority';
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
@@ -18,5 +18,5 @@ var ProviderSchema = new mongoose.Schema({
 
 //fetch data
 
-var Provider = mongoose.model('providers', ProviderSchema);
+var Provider = mongoose.model('friseure', ProviderSchema);
 module.exports = Provider;
