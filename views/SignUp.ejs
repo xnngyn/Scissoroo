@@ -34,14 +34,14 @@
 						<option value="Male">Herr</option>
 					</select><br/>
 
-					<p v-if="errors.length">
+					<p v-if="errors.length > 0">
 						<b>Please correct the following error(s):</b>
 						<ul>
 						  <li v-for="error in errors">{{ error }}</li>
 						</ul>
 					  </p>
 
-					  <h1>Ist verbunden</h1>
+					  
 
 					<input id="fname" v-model ="fname" name="fname"  type="text" placeholder="Vorname" required />
 					<input id="lname" v-model ="lname" name="lname" type="text" placeholder="Nachname" required /><br/>
