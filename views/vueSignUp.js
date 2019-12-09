@@ -16,7 +16,7 @@ data:{
     pass:null,
     bool: false,
     bool1: true,
-    name: JSON.parse('Lolli')
+    name: JSON.parse('<%- Lolli %>')
 
 
 },
