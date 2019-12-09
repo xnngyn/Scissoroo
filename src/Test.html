@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-test">
+           
+<h1> Methodenaufruf</h1>
+
+           <!-- Ausgabe einer Methode als Text -->
+            <p> {{ greet('afternoon') }}</p>
+
+
+            <h1>Datenaufruf</h1>
+<!-- Ausgabe der Daten als String -->
+
+        <p>Name: {{ name }}</p>
+        <p>Job: {{ job }}</p>
+
+        <h1>Databinding</h1>
+
+        <!-- Data Binding mit dem Beispiel eines Websiteaufrufes
+             Attribute müssen gebindet werden -->
+
+        <a v-bind:href = "website">Ninja Website</a>
+
+        <!-- Attribut wurde an Daten gebunden -->
+
+        <input type="text" v-bind:value="name">
+
+        <!-- Data Binding, hier jedoch Behandlung des Datentyps als HTML Code statt als String -->
+
+        <p v-html="websiteTag"></p>
+
+
+        <h1>Events</h1>
+
+        <!-- v-on = Directive, verhält sich wie actionlistener
+             Hier wurde ein mal die Methode direkt eingegeben und ein mal aufgerufen
+             Events können entweder mit v-on oder mit @ eingeleitet werden
+             nach dem event können mit .<name> modifier verwendet werden
+             once bewirkt z.B. das eine Funktion nur ein Mal losgehen kann -->
+
+        <button @click.once = "age++">Add a Year</button>
+        <button v-on:click = "ageSubtract(1)">Subtract a Year</button>
+        <button @dblclick="ageSubtract(10)">Subtract 10 Years</button>
+        <button v-on:dblclick="age = age + 10">Add 10 Years</button>
+
+        <p>My Age is {{ age }}</p>
+
+        <!-- Keyboard events -->
+
+        <input type="text" @keyup.enter="logName" />
+
+        <!-- neue div in einer div -->
+
+    <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+
+<!-- .prevent verhindert das erwartete verhalten-->
+
+    <a v-on:click.prevent="click" href="http://www.thenetninja.co.uk">The net Ninja</a>
+
+    </div>
+    <script src="testMain.js"></script>
+    </body>
+</html>

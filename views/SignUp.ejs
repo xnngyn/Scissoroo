@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+	
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
@@ -14,6 +14,7 @@
 
 
 		<title>Sign up</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-light bg-light">
@@ -27,13 +28,23 @@
 		<div id="createAcc">
 			<section class="insertuser">
 				<h3>Create an User-Account</h3>
-				<form action="/users/insertuser" method="post">
+				<form action="/users/insertuser" method="post" id="SignUpRules" @submit="checkForm">
 					<select id = "sex" name="sex">
 						<option value="Female" selected>Frau</option>
 						<option value="Male">Herr</option>
 					</select><br/>
-					<input id="fname" name="fname" type="text" placeholder="Vorname" required />
-					<input id="lname" name="lname" type="text" placeholder="Nachname" required /><br/>
+
+					<p v-if="errors.length">
+						<b>Please correct the following error(s):</b>
+						<ul>
+						  <li v-for="error in errors">{{ error }}</li>
+						</ul>
+					  </p>
+
+					  <h1>Ist verbunden</h1>
+
+					<input id="fname" v-model ="fname" name="fname"  type="text" placeholder="Vorname" required />
+					<input id="lname" v-model ="lname" name="lname" type="text" placeholder="Nachname" required /><br/>
 					<input id="gdatum" type="date" name="gdatum" required/><br/>
 					<input id="strasse" type="text" name="strasse" placeholder="Straße" required />
 					<input id="hausnr" type="text" name="hausnr" placeholder="Hausnummer" required /><br/>
@@ -47,5 +58,6 @@
 				</form>
 			</section>
 		</div>
+		<script src="vueSignUp.js"></script>
 	</body>
 </html>
