@@ -34,12 +34,14 @@
 						<option value="Male">Herr</option>
 					</select><br/>
 
-					<p v-if="errors.length > 0">
+					<p v-if="errors.length > 10">
 						<b>Please correct the following error(s):</b>
 						<ul>
 						  <li v-for="error in errors">{{ error }}</li>
 						</ul>
 					  </p>
+
+					  <p v-if="true">läuft</p>
 
 					  
 
