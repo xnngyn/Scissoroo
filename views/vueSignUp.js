@@ -1,4 +1,4 @@
-const SignUpRules = new Vue({
+new Vue({
     el: "#createAcc",
 
 data:{

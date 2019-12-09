@@ -10,7 +10,8 @@ new Vue({
        websiteTag:'<a href="http://www.thenetninja.co.uk"> The Net Ninja Website </a>',
        age: 23,
        x: 0,
-       y: 0
+       y: 0,
+       
        
    },
 
