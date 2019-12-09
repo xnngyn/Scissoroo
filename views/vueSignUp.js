@@ -14,7 +14,8 @@ data:{
     email:null,
     pass:null,
     bool: false,
-    bool1: true
+    bool1: true,
+    name: 'Lolli'
 
 
 },
