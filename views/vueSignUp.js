@@ -1,3 +1,4 @@
+
 new Vue({
     el: '#createAcc',
 
@@ -15,7 +16,7 @@ data:{
     pass:null,
     bool: false,
     bool1: true,
-    name: 'Lolli'
+    name: JSON.parse('Lolli')
 
 
 },
