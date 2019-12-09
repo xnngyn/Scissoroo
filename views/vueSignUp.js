@@ -13,7 +13,8 @@ data:{
     stadt:null,
     email:null,
     pass:null,
-    bool: false
+    bool: false,
+    bool1: true
 
 
 },
