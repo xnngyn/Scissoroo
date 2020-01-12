@@ -10,7 +10,7 @@ var session	=	require('express-session');
 var MongoStore = require('connect-mongodb-session')(session);
 
 // set port
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 7070;
 
 //view engine setup
 app.set('views', path.join(__dirname, 'views'));
